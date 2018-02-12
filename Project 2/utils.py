@@ -7,7 +7,7 @@ def save(obj,filename,directory=''):
 	pickle.dump(obj,open(directory+filename+'.pkl','wb'))
 
 def load(filename,directory=''):
-	return pickle.load(open(directory+filename+'.pkl','rb'))
+	return pickle.load(open(directory+filename+'.pkl','rb'), encoding='latin1')
 
 def save_plot(img,filename,directory=''):
     img.savefig(directory+'/'+filename + '.png')
@@ -25,8 +25,8 @@ def plot_confusion_matrix(cm, classes,
     plt.title(title)
     plt.colorbar()
     tick_marks = np.arange(len(classes))
-    plt.xticks(tick_marks, classes, rotation=45)
-    plt.yticks(tick_marks, classes)
+    #plt.xticks(tick_marks, classes, rotation=45)
+    #plt.yticks(tick_marks, classes)
 
     if normalize:
         cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
