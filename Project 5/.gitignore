@@ -1,6 +1,6 @@
 *.txt
 *.tar.gz
 *.tar
-/data/train/part2/nmf.pkl
-/data/train/part2/lsi.pkl
-/data/train/part2/tfidf.pkl
+Project 5/data/train/part2/nmf.pkl
+Project 5/data/train/part2/lsi.pkl
+Project 5/data/train/part2/tfidf.pkl
